@@ -4,6 +4,6 @@ RUN dnf update -y &&\
     dnf install -y @core @standard fish git micro entr fzf kernel-tools moreutils openssl tmux screen waypipe wl-clipboard nmap &&\
     chsh --shell /usr/bin/fish
 
-RUN echo 'EDITOR=micro' >>/etc/environment
+ENV EDITOR=micro
 
 CMD ["/usr/bin/fish"]
